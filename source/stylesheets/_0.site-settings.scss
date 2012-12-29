@@ -1,1 +1,11 @@
 @import 'compass';
+
+/* Typography */
+
+$sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serif-font-family: Georgia, 'Times New Roman', Times, serif;
+$mono-font-family: Menlo, Monaco, 'Courier New', monospace;
+
+$base-font-size: 14px;
+$base-line-height: 1.6;
+$base-font-family: $sans-font-family;

@@ -1,4 +1,7 @@
-/* Base
-================================================== */
-
 @import 'vendor/normalize';
+
+body {
+  font-family: $sans-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
