@@ -2,23 +2,23 @@
 
 /* Typography */
 
-$sans-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$serif-font-family: Georgia, 'Times New Roman', Times, serif;
-$mono-font-family: Menlo, Monaco, 'Courier New', monospace;
+$sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$serifFontFamily: Georgia, 'Times New Roman', Times, serif;
+$monoFontFamily: Menlo, Monaco, 'Courier New', monospace;
 
-$base-font-size: 14px;
-$base-line-height: 1.6;
-$base-font-family: $sans-font-family;
+$baseFontSize: 14px;
+$baseLineHeight: 1.6;
+$baseFontFamily: $sansFontFamily;
 
 
 /* Basic colors */
 
 $black: #000 !default;
 $gray: #555 !default;
-$gray-dark: !default;
-$gray-darker: #333 !default;
-$gray-light: #999 !default;
-$gray-lighter: #eee !default;
+$grayDark: !default;
+$grayDarker: #333 !default;
+$grayLight: #999 !default;
+$grayLighter: #eee !default;
 $white: #fff !default;
 $blue: #049cdb !default;
 $green: #46a546 !default;
@@ -31,49 +31,47 @@ $purple: #7a43b6 !default;
 
 /* Links */
 
-$link-color: #08c !default;
-$link-color-hover: darken($link-color, 15%) !default;
+$linkColor: #08c !default;
+$linkColorHover: darken($linkColor, 15%) !default;
 
 
 /* Form colors */
 
-$input-background: $white !default;
-$input-disabled-background: $gray-lighter !default;
-$form-actions-background: $f5f5f5 !default;
+$inputBackground: $white !default;
+$inputDisabledBackground: $grayLighter !default;
+$formActionsBackground: $f5f5f5 !default;
 
 /* Button */
-$btn-background: $white !default;
-$btn-border: #bbb !default;
+$btnBackground: $white !default;
+$btnBorder: #bbb !default;
 
-$btn-main-background: $link-color;
-$btn-main-background-highlight: adjust-hue($btn-main-background, 20%) !default;
+$btnMainBackground: $linkColor;
+$btnMainBackgroundHighlight: adjust-hue($btnMainBackground, 20%) !default;
 
-$btn-info-background: #5bc0de !default;
-$btn-info-background-highlight: #2f96b4 !default;
+$btnInfoBackground: #5bc0de !default;
+$btnInfoBackgroundHighlight: #2f96b4 !default;
 
-$btn-success-background: #62c462 !default;
-$btn-success-background-highlight:     #51a351 !default;
+$btnSuccessBackground: #62c462 !default;
+$btnSuccessBackgroundHighlight: #51a351 !default;
 
-$btn-warning-background: lighten($orange, 15%) !default;
-$btn-warning-background-highlight: $orange !default;
+$btnWarningBackground: lighten($orange, 15%) !default;
+$btnWarningBackgroundHighlight: $orange !default;
 
-$btn-danger-background: #ee5f5b !default;
-$btn-danger-background-highlight: #bd362f !default;
+$btnDangerBackground:               #ee5f5b !default;
+$btnDangerBackgroundHighlight:      #bd362f !default;
 
-$btn-inverse-background: #444 !default;
-$btn-inverse-background-highlight: $gray-darker !default;
-
+$btnInverseBackground:              #444 !default;
+$btnInverseBackgroundHighlight:     $grayDarker !default;
 
 /* Dropdowns */
+$dropdownBorder:                rgba(0,0,0,.2) !default;
+$dropdownDividerTop:            #e5e5e5 !default;
+$dropdownDividerBottom:         $white !default;
 
-$dropdown-background: $white !default;
-$dropdown-border: rgba(0,0,0,.2) !default;
-$dropdown-divider-top: #e5e5e5 !default;
-$dropdown-divider-bottom: $white !default;
+$dropdownLinkColor:             $grayDark !default;
+$dropdownLinkColorHover:        $white !default;
+$dropdownLinkColorActive:       $dropdownLinkColor !default;
 
-$dropdown-link-color: $gray-dark !default;
-$dropdown-link-color-hover: $white !default;
-$dropdown-link-color-active: $dropdown-link-color !default;
+$dropdownLinkBackgroundActive:  $linkColor !default;
+$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
 
-$dropdown-link-background-active: $link-color !default;
-$dropdown-link-background-hover: $dropdown-link-background-active !default;
