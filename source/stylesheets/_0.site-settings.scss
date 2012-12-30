@@ -59,3 +59,21 @@ $btn-warning-background-highlight: $orange !default;
 
 $btn-danger-background: #ee5f5b !default;
 $btn-danger-background-highlight: #bd362f !default;
+
+$btn-inverse-background: #444 !default;
+$btn-inverse-background-highlight: $gray-darker !default;
+
+
+/* Dropdowns */
+
+$dropdown-background: $white !default;
+$dropdown-border: rgba(0,0,0,.2) !default;
+$dropdown-divider-top: #e5e5e5 !default;
+$dropdown-divider-bottom: $white !default;
+
+$dropdown-link-color: $gray-dark !default;
+$dropdown-link-color-hover: $white !default;
+$dropdown-link-color-active: $dropdown-link-color !default;
+
+$dropdown-link-background-active: $link-color !default;
+$dropdown-link-background-hover: $dropdown-link-background-active !default;
