@@ -13,5 +13,20 @@
 	vertical-align: middle;
 	cursor: pointer;
 	@include border-radius(4px);
-	@include box-shadow();
+	background: $btnBackGround;
+	&:hover {
+		color: $grayDark;
+		text-decoration: none;
+		background-color: darken($white, 10%);
+	}
+	&.active,
+	&:active {
+		background-color: darken($white, 10%);
+	}
+	&.disabled,
+	&[disabled] {
+		cursor: default;
+		background-color: darken($white, 10%);
+		
+	}
 }
