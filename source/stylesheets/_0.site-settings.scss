@@ -9,3 +9,53 @@ $mono-font-family: Menlo, Monaco, 'Courier New', monospace;
 $base-font-size: 14px;
 $base-line-height: 1.6;
 $base-font-family: $sans-font-family;
+
+
+/* Basic colors */
+
+$black: #000 !default;
+$gray: #555 !default;
+$gray-dark: !default;
+$gray-darker: #333 !default;
+$gray-light: #999 !default;
+$gray-lighter: #eee !default;
+$white: #fff !default;
+$blue: #049cdb !default;
+$green: #46a546 !default;
+$red: #9d261d !default;
+$yellow: #ffc40d !default;
+$orange: #f89406 !default;
+$pink: #c3325f !default;
+$purple: #7a43b6 !default;
+
+
+/* Links */
+
+$link-color: #08c !default;
+$link-color-hover: darken($link-color, 15%) !default;
+
+
+/* Form colors */
+
+$input-background: $white !default;
+$input-disabled-background: $gray-lighter !default;
+$form-actions-background: $f5f5f5 !default;
+
+/* Button */
+$btn-background: $white !default;
+$btn-border: #bbb !default;
+
+$btn-main-background: $link-color;
+$btn-main-background-highlight: adjust-hue($btn-main-background, 20%) !default;
+
+$btn-info-background: #5bc0de !default;
+$btn-info-background-highlight: #2f96b4 !default;
+
+$btn-success-background: #62c462 !default;
+$btn-success-background-highlight:     #51a351 !default;
+
+$btn-warning-background: lighten($orange, 15%) !default;
+$btn-warning-background-highlight: $orange !default;
+
+$btn-danger-background: #ee5f5b !default;
+$btn-danger-background-highlight: #bd362f !default;
