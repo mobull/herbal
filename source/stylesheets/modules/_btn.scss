@@ -26,7 +26,33 @@
 	&.disabled,
 	&[disabled] {
 		cursor: default;
-		background-color: darken($white, 10%);
-		
+		background-color: darken($white, 10%);	
 	}
 }
+
+// Button Sizes
+
+// Large
+.btn-large {
+	padding: 9px 14px;
+	font-size: $baseFontSize + 2px;
+	line-height: normal;
+	@include border-radius(5px);
+}
+
+// Small 
+.btn-small {
+	padding: 3px 9px;
+	font-size: $baseFontSize - 2px;
+	line-height: $baseLineHeight - 2px;
+	@include border-radius(3px);
+}
+
+// Mini
+.btn-mini {
+	padding: 2px 6px;
+	font-size: $baseFontSize - 3px;
+	line-height: $baseLineHeight - 3px;
+}
+
+//
