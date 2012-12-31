@@ -1,1 +1,9 @@
-@mixin buttonBackground
+@mixin buttonBackground($btnMainBackground, $btnBorder, $textColor) {
+	color: $textColor;
+	background: $btnMainBackground;
+	border-color: $btnBorder;
+	&:hover, &:active, &.active, &.disabled, &[disabled] {
+		color: $textColor;
+		background-color: $btnMainBackground;
+	}
+}

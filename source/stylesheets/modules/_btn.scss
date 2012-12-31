@@ -13,7 +13,7 @@
 	vertical-align: middle;
 	cursor: pointer;
 	@include border-radius(4px);
-	background: $btnBackGround;
+	@include buttonBackground($textColor, $btnMainBackground, $btnBorder);
 	&:hover {
 		color: $grayDark;
 		text-decoration: none;
@@ -55,4 +55,22 @@
 	line-height: $baseLineHeight - 3px;
 }
 
-//
+// Set the backgrounds
+.btn-main {
+	@include buttonBackground($btnMainBackground,$btnMainBackgroundHighlight);
+}
+.btn-warning{
+	@include buttonBackground($buttonWarningBackground, $btnMainBackgroundHighlight);
+}
+.btn-danger{
+	@include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
+}
+.btn-success {
+	@include buttonBackground($buttonSuccessBackground, )
+}
+.btn-info {
+  @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+}
+.btn-inverse {
+  @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+}
