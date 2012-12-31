@@ -92,3 +92,10 @@ $successBorder: darken(adjust-hue($successBackground, -10), 3%) !default;
 
 $infoBackground: $blue !default;
 $infoBorder: darken(adjust-hue($infoBorder, -10), 3%) !default;
+
+// Tables
+$tableBackground: transparent !default; // overall background-color
+$tableBackgroundAccent: !default; // for striping
+$tableBackgroundHover: $grayLight !default; // for hover
+$tableBorder: #ddd !default; // table and cell border
+
