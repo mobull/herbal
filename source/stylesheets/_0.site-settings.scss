@@ -6,9 +6,9 @@ $sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $serifFontFamily: Georgia, 'Times New Roman', Times, serif;
 $monoFontFamily: Menlo, Monaco, 'Courier New', monospace;
 
-$baseFontSize: 14px;
+$baseFontSize: 14px !default;
 $baseLineHeight: 1.6;
-$baseFontFamily: $sansFontFamily;
+$baseFontFamily: $sansFontFamily !default;
 
 
 /* Basic colors */
