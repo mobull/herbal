@@ -1,6 +1,6 @@
 @import 'compass';
 
-/* Typography */
+// Typography 
 
 $sansFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $serifFontFamily: Georgia, 'Times New Roman', Times, serif;
@@ -11,7 +11,7 @@ $baseLineHeight: 1.6;
 $baseFontFamily: $sansFontFamily !default;
 
 
-/* Basic colors */
+// Basic colors 
 
 $black: #000 !default;
 $gray: #555 !default;
@@ -28,20 +28,20 @@ $orange: #f89406 !default;
 $pink: #c3325f !default;
 $purple: #7a43b6 !default;
 
-
-/* Links */
+// Links
 
 $linkColor: #08c !default;
 $linkColorHover: darken($linkColor, 15%) !default;
 
 
-/* Form colors */
+// Form colors 
 
 $inputBackground: $white !default;
 $inputDisabledBackground: $grayLighter !default;
 $formActionsBackground: $f5f5f5 !default;
 
-/* Button */
+// Button 
+
 $btnBackground: $white !default;
 $btnBorder: #bbb !default;
 
@@ -64,6 +64,7 @@ $btnInverseBackground:              #444 !default;
 $btnInverseBackgroundHighlight:     $grayDarker !default;
 
 /* Dropdowns */
+
 $dropdownBorder:                rgba(0,0,0,.2) !default;
 $dropdownDividerTop:            #e5e5e5 !default;
 $dropdownDividerBottom:         $white !default;
@@ -76,10 +77,13 @@ $dropdownLinkBackgroundActive:  $linkColor !default;
 $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
 
 // Scaffolding
+
 $bodyBackground: $white !default;
 $textColor: $grayDark !default;
 
+
 // Form states and alters
+
 $warningText: $gray !default;
 $warningBackground: $yellow !default;
 $warningBorder: darken(adjust-hue($warningBackground, -10), 3%) !default;
@@ -94,6 +98,7 @@ $infoBackground: $blue !default;
 $infoBorder: darken(adjust-hue($infoBorder, -10), 3%) !default;
 
 // Tables
+
 $tableBackground: transparent !default; // overall background-color
 $tableBackgroundAccent: !default; // for striping
 $tableBackgroundHover: $grayLight !default; // for hover

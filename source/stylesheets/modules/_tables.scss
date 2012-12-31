@@ -4,7 +4,7 @@ table {
 	background-color: $tableBackground;
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+	}
 
 // Baseline styles
 .table {
@@ -24,7 +24,7 @@ table {
 	thead th {
 		vertical-align: bottom;
 	}
-}
+	}
 	// Remove top border from thead by default
 	caption + thead tr:first-child th,
   caption + thead tr:first-child td,
@@ -34,7 +34,9 @@ table {
   thead:first-child tr:first-child td {
     border-top: 0;
   }
+
   // For first th or td in the first thead or tbody
+
   thead:first-child tr:first-child th:first-child,
   tbody:first-child tr:first-child td:first-child {
   	@include border-left-radius(4px);
@@ -43,7 +45,10 @@ table {
   tbody:first-child tr:first-child td:last-child {
   	@include border-right-radius(4px);
   }
+
+
   // For first th or td in the last row in the first thead or tbody
+  
   thead:last-child tr:last-child th:first-child,
   tbody:last-child tr:last-child td:first-child,
   tfoot:last-child tr:last-child td:first-child {
