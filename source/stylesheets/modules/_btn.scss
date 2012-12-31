@@ -58,18 +58,18 @@
 .btn-main {
 	@include buttonBackground($btnMainBackground, $btnMainBackgroundHighlight);
 }
-.btn-warning{
+.btn-warning {
 	@include buttonBackground($buttonWarningBackground, $btnMainBackgroundHighlight);
 }
-.btn-danger{
+.btn-danger {
 	@include buttonBackground($btnDangerBackground, $btnDangerBackgroundHighlight);
 }
 .btn-success {
 	@include buttonBackground($btnSuccessBackground, $btnSuccessBackgroundHighlight);
 }
 .btn-info {
-  @include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
+	@include buttonBackground($btnInfoBackground, $btnInfoBackgroundHighlight);
 }
 .btn-inverse {
-  @include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
+	@include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
 }
