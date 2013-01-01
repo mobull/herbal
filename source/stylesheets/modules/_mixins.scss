@@ -1,3 +1,6 @@
+// Mixins 
+// Button
+
 @mixin buttonBackground($btnMainBackground, $btnBorder, $textColor) {
 	color: $textColor;
 	background: $btnMainBackground;
@@ -6,4 +9,11 @@
 		color: $textColor;
 		background-color: $btnMainBackground;
 	}
+}
+
+// Fonts
+@mixin font-shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
 }

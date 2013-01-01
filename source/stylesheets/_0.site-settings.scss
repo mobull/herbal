@@ -7,7 +7,7 @@ $serifFontFamily: Georgia, 'Times New Roman', Times, serif;
 $monoFontFamily: Menlo, Monaco, 'Courier New', monospace;
 
 $baseFontSize: 14px !default;
-$baseLineHeight: 1.6;
+$baseLineHeight: 20px;
 $baseFontFamily: $sansFontFamily !default;
 
 
@@ -33,6 +33,8 @@ $purple: #7a43b6 !default;
 $linkColor: #08c !default;
 $linkColorHover: darken($linkColor, 15%) !default;
 
+// Forms
+$inputBorderRadius: 3px !default;
 
 // Form colors 
 

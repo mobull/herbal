@@ -1,0 +1,80 @@
+// Forms
+
+// General styles
+
+form {
+	margin: 0 0 $baseLineHeight;
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+//
+legend {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin-bottom: $baseLineHeight;
+	font-size: $baseFontSize * 1.5;
+	line-height: $baseLineHeight * 2;
+	color: $grayDark;
+	border: 0;
+	border-bottom: 1px solid $gray;
+	small {
+		font-size: $baseLineHeight * 0.75;
+		color: $grayLight;
+	}
+}
+
+// Set font forms 
+label,
+input,
+button,
+select,
+textarea {
+  @include font-shorthand($baseFontSize,normal,$baseLineHeight); // Set size, weight, line-height here
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: $baseFontFamily; // And only set font-family here for those that need it (note the missing label element)
+}
+
+// 
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+// Size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  display: inline-block;
+  height: $baseLineHeight;
+  padding: 4px 6px;
+  margin-bottom: 9px;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  color: $gray;
+  @include border-radius($inputBorderRadius);
+}
