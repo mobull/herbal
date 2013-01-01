@@ -25,6 +25,19 @@ table {
 		vertical-align: bottom;
 	}
 	}
+
+
+  //Bordered version
+  .table-bordered {
+  border: 1px solid $tableBorder;
+  border-collapse: separate; // Done so we can round those corners!
+  *border-collapse: collapse; // IE7 can't round corners anyway
+  border-left: 0;
+  @include border-radius(4px);
+  th,
+  td {
+    border-left: 1px solid $tableBorder;
+  }
 	// Remove top border from thead by default
 	caption + thead tr:first-child th,
   caption + thead tr:first-child td,
@@ -36,7 +49,6 @@ table {
   }
 
   // For first th or td in the first thead or tbody
-
   thead:first-child tr:first-child th:first-child,
   tbody:first-child tr:first-child td:first-child {
   	@include border-left-radius(4px);
@@ -59,3 +71,15 @@ table {
   tfoot:last-child tr:last-child td:last-child {
  		@include border-right-radius(4px);
   }
+}
+
+
+// Hover effect
+.table-hover {
+  tbody {
+    tr:hover td,
+    tr:hover th {
+      background-color: $tableBackgroundHover;
+    }
+  }
+}
