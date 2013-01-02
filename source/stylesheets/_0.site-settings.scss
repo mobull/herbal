@@ -90,12 +90,16 @@ $warningText: $gray !default;
 $warningBackground: $yellow !default;
 $warningBorder: darken(adjust-hue($warningBackground, -10), 3%) !default;
 
+
+$errorText: $gray !default;
 $errorBackground: $red !default;
 $errorBorder: darken(adjust-hue($errorBorder, -10), 3%) !default;
 
+$successText: $gray !default;
 $successBackground: $green !default;
 $successBorder: darken(adjust-hue($successBackground, -10), 3%) !default;
 
+$infoText: $gray !default;
 $infoBackground: $blue !default;
 $infoBorder: darken(adjust-hue($infoBorder, -10), 3%) !default;
 
@@ -106,3 +110,6 @@ $tableBackgroundAccent: !default; // for striping
 $tableBackgroundHover: $grayLight !default; // for hover
 $tableBorder: #ddd !default; // table and cell border
 
+// Input placeholder text color
+// -------------------------
+$placeholderText:         $grayLight !default;
