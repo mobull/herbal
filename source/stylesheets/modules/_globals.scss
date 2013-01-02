@@ -1,0 +1,39 @@
+// Misc
+// Quick floats
+.fl {
+	@include float-left;
+}
+.fr {
+	@include float-right;
+}
+
+// Text align
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+
+// Toggling content
+.hide {
+	display: none;
+}
+.hide-override {
+	display: none !important;
+}
+.show {
+	display: block;
+}
+
+// Visibility 
+.invisible {
+	visibility:hidden;
+}
+
+.affix {
+	position: fixed;
+}
