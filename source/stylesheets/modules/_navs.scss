@@ -17,4 +17,53 @@ nav > li > a:hover {
   text-decoration: none;
   background-color: $grayLighter;
 }
-// 
+
+// Nav headers (for dropdowns and lists)
+.nav-header {
+	display: block;
+	padding: 3px 15px;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: $baseLineHeight;
+	color: $grayLight;
+}
+
+// Nav list
+.nav-list {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-bottom: 0;
+}
+.nav-list > li > a,
+.nav-list .nav-header {
+	margin-left:  -15px;
+  margin-right: -15px;
+}
+.nav-list > li > a {
+  padding: 3px 15px;
+}
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+  color: $white;
+  background-color: $linkColor;
+}
+.nav-list [class^="icon-"] {
+  margin-right: 2px;
+}
+// Tabs and pills
+// Common styles
+.nav-tabs,
+.nav-pills {
+  @include clearfix();
+}
+.nav-tabs > li,
+.nav-pills > li {
+  float: left;
+}
+.nav-tabs > li > a,
+.nav-pills > li > a {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: 2px;
+  line-height: 14px; // keeps the overall height an even number
+}
