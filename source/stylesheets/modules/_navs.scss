@@ -1,0 +1,20 @@
+// Navs
+
+// BASE CLASS
+// ----------
+
+nav {
+  margin-left: 0;
+  margin-bottom: $baseLineHeight;
+  list-style: none;
+}
+
+nav > li > a {
+	display: block;
+}
+
+nav > li > a:hover {
+  text-decoration: none;
+  background-color: $grayLighter;
+}
+// 
