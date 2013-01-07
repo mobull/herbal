@@ -73,3 +73,26 @@
 .btn-inverse {
 	@include buttonBackground($btnInverseBackground, $btnInverseBackgroundHighlight);
 }
+
+// Button groups
+.btn-group {
+	position: relative;
+	font-size: 0;// remove as part 1 of font-size inline-block hack
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+// Manage multiple button groups
+..btn-toolbar {
+  font-size: 0; // Hack to remove whitespace that results from using inline-block
+  margin-top: $baseLineHeight / 2;
+  margin-bottom: $baseLineHeight / 2;
+  .btn-group {
+    @include inline-block;
+  }
+  .btn + .btn,
+  .btn-group + .btn,
+  .btn + .btn-group {
+    margin-left: 5px;
+  }
+}

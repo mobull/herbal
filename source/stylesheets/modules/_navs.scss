@@ -59,7 +59,7 @@
 }
 .nav-tabs > li,
 .nav-pills > li {
-  float: left;
+  @include float-left;
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
