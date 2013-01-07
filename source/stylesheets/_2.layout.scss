@@ -1,2 +1,14 @@
 /* Layout
 ================================================== */
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	@include clearfix();
+}
+
+// Fluid layouts (left aligned, with sidebar, min- & max-width content)
+.container-fluid {
+  padding-right: $gridGutterWidth;
+  padding-left: $gridGutterWidth;
+  @include clearfix();
+}
