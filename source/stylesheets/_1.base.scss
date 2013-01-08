@@ -5,3 +5,36 @@ body {
   font-size: $baseFontSize;
   line-height: $baseLineHeight;
 }
+// Links
+// -------------------------
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+}
+a:hover {
+  color: $linkColorHover;
+  text-decoration: underline;
+}
+
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  @include border-radius(6px);
+}
+
+// Add polaroid-esque trim
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+// Perfect circle
+.img-circle {
+  @include border-radius(500px); // crank the border-radius so it works with most reasonably sized images
+}
