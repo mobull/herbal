@@ -34,3 +34,113 @@
   }
 }
 .clearfix { @include clearfix(); }
+
+// Block level inputs
+// This is also a class, defined at the bottom of the file
+@mixin input-block-level() {
+  display: block;
+  width: 100%;
+  min-height: 30px;        // Make inputs at least the height of their button counterpart
+  @include box-sizing(border-box); // Makes inputs behave like true block-level elements
+}
+.input-block-level {
+  @include input-block-level;
+}
+
+// The Grid
+@mixin grid-core($gridColumnWidth, $gridGutterWidth) {
+  .row {
+    margin-left: $gridGutterWidth * -1;
+    @include clearfix();
+  }
+
+  [class*="span"] {
+    float: left;
+    min-height: 1px; // prevent collapsing columns
+    margin-left: $gridGutterWidth;
+  }
+
+  // Set the container width, and override it for fixed navbars in media queries
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container { @include grid-core-span($gridColumns, $gridColumnWidth, $gridGutterWidth); }
+
+  @include grid-core-spanX($gridColumns, $gridColumnWidth, $gridGutterWidth);
+  @include grid-core-offsetX($gridColumns, $gridColumnWidth, $gridGutterWidth);
+}
+@mixin grid-core-spanX($cols, $columnWidth, $gutterWidth) {
+  @for $i from 1 through $cols {
+    .span#{$i} { @include grid-core-span($i, $columnWidth, $gutterWidth) };
+  }
+}
+@mixin grid-core-span($columns, $columnWidth, $gutterWidth) {
+  width: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1));
+}
+@mixin grid-core-offsetX($cols, $columnWidth, $gutterWidth) {
+  @for $i from 1 through $cols {
+    .offset#{$i} { @include grid-core-offset($i, $columnWidth, $gutterWidth) };
+  }
+}
+@mixin grid-core-offset($columns, $columnWidth, $gutterWidth) {
+  margin-left: ($columnWidth * $columns) + ($gutterWidth * ($columns + 1));
+}
+
+@mixin grid-fluid ($columnWidth, $gutterWidth) {
+  .row-fluid {
+    width: 100%;
+    @include clearfix();
+    [class*="span"] {
+      @include input-block-level();
+      float: left;
+      margin-left: $gutterWidth;
+      *margin-left: $gutterWidth - (.5px / $gridRowWidth * 100 * 1%);
+    }
+    [class*="span"]:first-child {
+      margin-left: 0;
+    }
+
+    // generate .spanX and .offsetX
+    @for $i from 1 through $gridColumns {
+      .span#{$i} { @include grid-fluid-span($i, $columnWidth, $gutterWidth); }
+      .offset#{$i} { @include grid-fluid-offset($i, $columnWidth, $gutterWidth); }
+      .offset#{$i}:first-child { @include grid-fluid-offsetFirstChild($i, $columnWidth, $gutterWidth); }
+    }
+  }
+}
+
+@mixin grid-fluid-span($columns, $columnWidth, $gutterWidth){
+  width: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1));
+  *width: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1)) - (.5px / $gridRowWidth * 100 * 1%);
+}
+
+@mixin grid-fluid-offset($columns, $columnWidth, $gutterWidth) {
+  margin-left: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1)) + ($gutterWidth*2);
+  *margin-left: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1)) - (.5px / $gridRowWidth * 100 * 1%) + ($gutterWidth * 2) - (.5px / $gridRowWidth * 100 * 1%);
+}
+
+@mixin grid-fluid-offsetFirstChild($columns, $columnWidth, $gutterWidth) {
+  margin-left: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1)) + ($gutterWidth);
+  *margin-left: ($columnWidth * $columns) + ($gutterWidth * ($columns - 1)) - (.5px / $gridRowWidth * 100 * 1%) + $gutterWidth - (.5px / $gridRowWidth * 100 * 1%);
+}
+
+@mixin grid-input($columnWidth, $gutterWidth) {
+  input,
+  textarea,
+  .uneditable-input {
+    margin-left: 0; // override margin-left from core grid system
+  }
+
+  // Space grid-sized controls properly if multiple per line
+  .controls-row [class*="span"] + [class*="span"] {
+    margin-left: $gutterWidth;
+  }
+
+  @for $i from 1 through $gridColumns {
+    input.span#{$i}, textarea.span#{$i}, .uneditable-input.span#{$i} { @include grid-input-span($i, $columnWidth, $gutterWidth); }
+  }
+}
+
+@mixin grid-input-span($columns, $columnWidth, $gutterWidth) {
+  width: (($columnWidth) * $columns) + ($gutterWidth * ($columns - 1)) - 14;
+}
